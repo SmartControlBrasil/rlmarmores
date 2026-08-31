@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}RLMarmores{% endblock %}</title>
+    <meta name="description" content="{% block description %}RLMarmores - Mármores e Granitos de alto padrão.{% endblock %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+    {% include "institutional/partials/header.html" %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include "institutional/partials/footer.html" %}
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
