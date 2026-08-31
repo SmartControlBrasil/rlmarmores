@@ -1,5 +1,72 @@
+{% load static %}
+<!--Main Footer-->
 <footer class="main-footer">
-    <div class="container">
-        <p>&copy; {% now "Y" %} RLMarmores. Todos os direitos reservados.</p>
+    <div class="auto-container">
+        <!--Widgets Section-->
+        <div class="widgets-section">
+            <div class="row clearfix">
+
+                <!--big column-->
+                <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="row clearfix">
+
+                        <!--Footer Column-->
+                        <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                            <div class="footer-widget logo-widget">
+                                <div class="logo">
+                                    <a href="{% url 'institutional:home' %}">
+                                        <img src="{% static 'institutional/images/footer-logo.png' %}" alt="RLMarmores Footer Logo" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Footer Column-->
+                        <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                            <div class="footer-widget address-widget">
+                                <h2>Nosso Endereço</h2>
+                                <ul>
+                                    <li>Av. das Nações Unidas, 12345 - Pinheiros, São Paulo - SP, 04578-000</li>
+                                    <li>Telefone: <strong>(11) 4584-8478</strong> <br> contato@rlmarmores.com.br</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--big column-->
+                <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                    <div class="row clearfix">
+
+                        <!--Footer Column-->
+                        <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                            <div class="footer-widget links-widget">
+                                <h2>Links Rápidos</h2>
+                                <ul>
+                                    <li><a href="{% url 'institutional:home' %}">Home</a></li>
+                                    <li><a href="#">Sobre Nós</a></li>
+                                    <li><a href="#">Serviços</a></li>
+                                    <li><a href="#">Projetos</a></li>
+                                    <li><a href="#">Contato</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--Footer Column-->
+                        <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                            <div class="footer-widget links-widget">
+                                <h2>Copyright</h2>
+                                <div class="copyright">&copy; {% now "Y" %} RLMarmores. Todos os direitos reservados.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </footer>
+<!--Main Footer-->
+

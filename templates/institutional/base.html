@@ -1,23 +1,62 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}RLMarmores{% endblock %}</title>
-    <meta name="description" content="{% block description %}RLMarmores - Mármores e Granitos de alto padrão.{% endblock %}">
+    <title>{% block title %}RLMarmores - Mármores e Granitos de Alto Padrão{% endblock %}</title>
+    <!-- Stylesheets -->
+    <link href="{% static 'institutional/css/vendor/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'institutional/css/vendor/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'institutional/css/vendor/owl.css' %}" rel="stylesheet">
+    <link href="{% static 'institutional/css/vendor/jquery.fancybox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'institutional/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'institutional/css/responsive.css' %}" rel="stylesheet">
+
+    <!-- Color Themes -->
+    <link id="theme-color-file" href="{% static 'institutional/css/color-themes/default-theme.css' %}" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{% static 'institutional/images/favicon.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'institutional/images/favicon.png' %}" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
     {% block extra_css %}{% endblock %}
 </head>
 <body>
 
+<div class="page-wrapper">
+    <!-- Main Header-->
     {% include "institutional/partials/header.html" %}
 
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+    {% block content %}{% endblock %}
 
+    <!-- Main Footer-->
     {% include "institutional/partials/footer.html" %}
+</div>
+<!--End pagewrapper-->
 
-    {% block extra_js %}{% endblock %}
+<!-- Scroll to top -->
+<div class="scroll-to-top scroll-to-target" data-target="html" style="display: flex; align-items: center; justify-content: center;">
+    <span style="display: inline-block; width: 14px; height: 14px; color: #fff;">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+        </svg>
+    </span>
+</div>
+
+<!-- Scripts -->
+<script src="{% static 'institutional/js/vendor/jquery.js' %}"></script>
+<script src="{% static 'institutional/js/vendor/bootstrap.min.js' %}"></script>
+<script src="{% static 'institutional/js/vendor/jquery.fancybox.js' %}"></script>
+<script src="{% static 'institutional/js/vendor/owl.js' %}"></script>
+<script src="{% static 'institutional/js/vendor/wow.js' %}"></script>
+<script src="{% static 'institutional/js/vendor/appear.js' %}"></script>
+<script src="{% static 'institutional/js/main.js' %}"></script>
+
+{% block extra_js %}{% endblock %}
+
 </body>
 </html>
+
